@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  install-rate-prepare:
+    user: root
+    image: "install_rate:0.1"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      LIMIT: "100000"
+      EXEC_DATE: "2024-12-13"
+      VAL_RATIO: "0.2"
+      MINORITY_CLASS_RATIO: "0.2"
+    volumes:
+      - ./src/job/:/code/job
+    command: python main.py prepare
+
+  install-rate-train:
+    user: root
+    image: "install_rate:0.1"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      LIMIT: "100000"
+      EXEC_DATE: "2024-12-13"
+      MODEL_REF: "logistic_regression"
+      GRID_SEARCH: "true"
+    volumes:
+      - ./src/job/:/code/job
+    command: python main.py train
+
+  install-rate-evaluate:
+    user: root
+    image: "install_rate:0.1"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      LIMIT: "100000"
+      EXEC_DATE: "2024-12-13"
+      MODEL_REF: "logistic_regression"
+    volumes:
+      - ./src/job/:/code/job
+    command: python main.py evaluate

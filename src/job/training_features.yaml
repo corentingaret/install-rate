@@ -1,0 +1,97 @@
+feature_engineering:
+  - Log App installs in last 7 days
+  - Already displayed in last 1 days
+  # - Already displayed in last 7 days
+  - Already displayed in last 28 days
+  - Previous session fs cpm
+
+categorical:
+  - app
+  # - bid_id
+  - connection_type
+  - country
+  # - device_manufacturer
+  # - device_model
+  # - device_resolution
+  # - mediation
+  - os_version
+  - placement
+  # - platform
+  - promoted_entity
+  # - user_id
+  # - version
+  # - limited_ad_tracking # does not seem to introduce bias
+  # - do_not_dist
+  - battery_saver_enable
+  # - batt_charge
+  - has_skip_prior_rv
+  - airplane_mode_enable
+  - is_premium
+
+# numerical:
+#   - App installs in last 1 days
+#   - App installs in last 28 days
+#   - App installs in last 7 days
+#   - IAP revenue in last 1 days
+#   - IAP revenue in last 28 days
+#   - IAP revenue in last 7 days
+#   - Publisher revenue (VAN) last 1 days
+#   # - Publisher revenue (VAN) last 28 days
+#   - Publisher revenue (VAN) last 7 days
+#   - app_open_count_since_install
+#   - available_disk_space
+#   - battery
+#   - fs_click_count_since_install
+#   - fs_count_since_install
+#   - game_count
+#   - game_count_since_install
+#   - game_count_success
+#   - global_token_index
+#   - play_time
+#   - ppi
+#   - rv_click_count_since_install
+#   - rv_count_since_install
+#   - session_count_since_install
+#   - token_index
+#   - total_disk_space
+#   - total_time
+
+# unaggregated:
+#   - current_x_session_description
+#   - previous_x_session_description
+#   - revenues
+#   - revenues_since_install
+#   - first_x_session_description
+#   - previous_session_cpm
+#   - purchase_since_install
+#   - Game count in last 1 days, by source_app
+#   - Game count in last 7 days, by source_app
+#   - Game count in last 28 days, by source_app
+#   - Sessions in last 1 days, by source_app
+#   - Sessions in last 7 days, by source_app
+#   - Sessions in last 28 days, by source_app
+#   - RV watched in last 1 days, by Source App
+#   - RV watched in last 7 days, by Source App
+#   - RV watched in last 28 days, by Source App
+#   - FS watched in last 1 days, by Source App
+#   - FS watched in last 7 days, by Source App
+#   - FS watched in last 28 days, by Source App
+#   - RV shown in last 1 days, by Source App
+#   - RV shown in last 7 days, by Source App
+#   - RV shown in last 28 days, by Source App
+#   - FS shown in last 1 days, by Source App
+#   - FS shown in last 7 days, by Source App
+#   - FS shown in last 28 days, by Source App
+#   - Session length in last 1 days, by Source App
+#   - Session length in last 7 days, by Source App
+#   - Session length in last 28 days, by Source App
+#   - Game length in last 1 days, by Source App
+#   - Game length in last 7 days, by Source App
+#   - Game length in last 28 days, by Source App
+#   - Game Finished Count in last 1 days, by Source App
+#   - Game Finished Count in last 7 days, by Source App
+#   - Game Finished Count in last 28 days, by Source App
+#   - Impression Count in last 1 days, by Promoted Entity
+#   - Impression Count in last 7 days, by Promoted Entity
+#   - Impression Count in last 28 days, by Promoted Entity
+
